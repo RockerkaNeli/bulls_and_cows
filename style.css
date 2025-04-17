@@ -1,0 +1,24 @@
+.nadpis{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bull{
+    align-self: flex-start;
+    justify-content: right;
+    margin-left: -1%;
+}
+.cow{
+    position: relative;
+    align-items: flex-end;
+    justify-content: left;
+    margin-left: 86%;
+    margin-top: -20%;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lucida Handwriting'; 
+    margin-top: -6%;
+    
+}

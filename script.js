@@ -1,4 +1,5 @@
 let secret = generateSecret();
+let guessesHistory = [];
 
 function generateSecret() {
     let digits = [];
@@ -28,17 +29,28 @@ function checkGuess() {
     for (let i = 0; i < 4; i++) {
         if (guess[i] === secret[i]) {
             bulls++;
-        }
-        else if (secret.includes(guess[i])) {
+        } else if (secret.includes(guess[i])) {
             cows++;
         }
     }
 
-    document.getElementById("result").innerText =
-        `Bulls: ${bulls}, Cows: ${cows}`;
+    const resultText = `Bulls: ${bulls}, Cows: ${cows}`;
+    const history = `Bulls: ${bulls}, Cows: ${cows}, Number: ${guess.join("")}`;
+    document.getElementById("result").innerText = resultText;
+
+    guessesHistory.push(history);
+    updateHistory();
 
     if (bulls === 4) {
         alert("Gratuluji! Uhodl jsi číslo!");
-        secret = generateSecret(); // Nové číslo
+        secret = generateSecret();
+        guessesHistory = [];
+        updateHistory();
     }
+}
+
+function updateHistory() {
+    const historyDiv = document.getElementById("history");
+    
+    historyDiv.innerHTML = "<strong>Historie tipů:</strong><br>" + guessesHistory.join("<br>");
 }

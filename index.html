@@ -11,25 +11,27 @@
 <body>
     <div class = "nadpis">
         <header>
-            <img src="bull.png" width="237" height="154" class = "bull" alt="bull picture"><h1>BULLS & COWS</h1><img src="cow.png" width="206" height="154" class = "cow" alt="cow picture" >
+            <img src="bull.png" width="237" height="154" class = "bull" alt="bull picture"><h1>BULLS & COWS</h1><img src="cow.png" width="206" height="154" class = "cow" alt="cow picture">
         </header>
     </div>
     <div class = "achievments">
         <main>
             <section>
-                <button>Obtížnost</button>
-            </section>
-            <section>
-                <p>Zadej 4 různá čísla (0-9):</p>
+                <article>
+                <p><strong> 4 různá čísla (0-9):</strong></p>
                 <div>
-                    <input type="number" id="n0" min="0" max="9">
-                    <input type="number" id="n1" min="0" max="9">
-                    <input type="number" id="n2" min="0" max="9">
-                    <input type="number" id="n3" min="0" max="9">
-                </div>
-                <button onclick="checkGuess()">Hádej!</button>
-                <div class="result" id="result"></div>
                 
+                        <input type="number" id="n0" min="0" max="9">
+                        <input type="number" id="n1" min="0" max="9">
+                        <input type="number" id="n2" min="0" max="9">
+                        <input type="number" id="n3" min="0" max="9">
+                    </div>
+                    <button onclick="checkGuess()">Hádej!</button>
+                    <div class="result" id="result" title="Bulls = správné číslo, správná pozice.
+Cows = správné číslo, špatná pozice."></div>
+                </article>
+                <div class="history" id="history" style="margin-top: 10px;"></div>
+
             </section>
         </main>
     </div>

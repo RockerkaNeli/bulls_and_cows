@@ -1,3 +1,5 @@
+body { font-family: sans-serif; padding: 50px; background-image: url(cutcutkraj.jpg) ;}
+
 .nadpis{
     display: flex;
     flex-direction: column;
@@ -6,14 +8,16 @@
 .bull{
     align-self: flex-start;
     justify-content: right;
-    margin-left: -1%;
+    margin-left: -0.1%;
+    margin-bottom: -1.7%;
+    font-family: sans-serif;
 }
 .cow{
-    position: relative;
-    align-items: flex-end;
     justify-content: left;
     margin-left: 86%;
-    margin-top: -20%;
+    margin-top: -9%;
+    
+    font-family: sans-serif;
 }
 h1{
     text-align: center;
@@ -22,11 +26,31 @@ h1{
     margin-top: -6%;
     
 }
+    
+input[type="number"] { width: 40px; font-size: 20px; text-align: center; margin: 5px; font-family: sans-serif;}
+    
+button { font-size: 18px; padding: 10px; margin-top: 10px; font-family: sans-serif;}
+    
+.result { margin-top: 20px; font-size: 20px; margin-bottom: 20px; font-family: sans-serif;}
 
-body { font-family: Arial; padding: 30px; }
+section {
+    margin: 0 auto;
+    width: 20%; /* nebo jiná šířka */
+    font-family: sans-serif;
     
-input[type="number"] { width: 40px; font-size: 20px; text-align: center; margin: 5px; }
     
-button { font-size: 18px; padding: 10px; margin-top: 10px; }
+}
+.history{
+    font-size: medium;
+}
+
+article{
+    border-width: 1px;
+    border-color: #000000;
+    border-style: outset;
+    text-align: center;
+    font-family: sans-serif;
+    border-radius: 20px;
+    background-color: #eae2b7;
     
-.result { margin-top: 20px; font-size: 20px; }
+}
